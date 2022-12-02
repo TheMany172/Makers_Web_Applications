@@ -1,0 +1,48 @@
+<!-- GET /albums -->
+<html>
+    <head>
+      <title> Album List </title>
+    </head>
+    <body>
+        <h1>Albums</h1>
+        
+        {% for album in albums %}
+          <article>
+            <h2>
+            <a href="/albums/{{album.id}}">{{album.title}}</a>
+            </h2>
+            <p>
+              Released: {{album.release_year}}
+              Artist: {{album.artist_id}}
+            </p>
+          </article>
+        {% endfor %}
+    </body>
+</html>
+
+
+<!-- Example for GET /albums/1 -->
+
+<!-- <html>
+  <head></head>
+  <body>
+    <h1>Doolittle</h1>
+    <p>
+      Release year: 1989
+      Artist: Pixies
+    </p>
+  </body>
+</html> -->
+
+<!-- Example for GET /albums/2 -->
+
+<!-- <html>
+  <head></head>
+  <body>
+    <h1>Surfer Rosa</h1>
+    <p>
+      Release year: 1988
+      Artist: Pixies
+    </p>
+  </body>
+</html> -->
